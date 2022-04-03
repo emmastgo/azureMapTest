@@ -31,7 +31,7 @@
     <div id="map-id"></div>
     <script>
       const subscriptionKey = "a3xqTvEnM8WdNT2zXfivmWrlqL_DGijo4xnaV7iTxW0";
-      const tilesetIdCelis = "29a66fca-5fe8-a2f2-b756-03a0f1e71ef6";
+      const tilesetId = "f87d303d-31e8-a62a-80a9-b57f930f773b";
 
       const map = new atlas.Map("map-id", {
         //use your facility's location
@@ -52,7 +52,7 @@
 
       const indoorManager = new atlas.indoor.IndoorManager(map, {
         levelControl: levelControl, //level picker
-        tilesetId: tilesetIdCelis,
+        tilesetId: tilesetId,
       });
 
       map.events.add("levelchanged", indoorManager, (eventData) => {
@@ -64,8 +64,6 @@
         //put code that runs after a facility has been changed
         console.log("The facility has changed:", eventData);
       });
-
-
     </script>
   </body>
 </html>
